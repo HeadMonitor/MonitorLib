@@ -15,7 +15,7 @@ public class ReadabilityUtilities
      */
     public static Component materialToReadable(Material material)
     {
-        return Component.translatable(material.translationKey());
+        return Component.translatable(material.getTranslationKey());
     }
 
     /**

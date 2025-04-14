@@ -2,6 +2,7 @@ package net.headmonitor.MonitorLibSpigot.Crafters;
 
 import net.headmonitor.MonitorLibSpigot.ComponentUtilities;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
@@ -13,6 +14,8 @@ import java.util.*;
 @SuppressWarnings("unused")
 public class ItemCraft
 {
+
+    LegacyComponentSerializer legacySerializer = LegacyComponentSerializer.legacySection();
 
     private Material material;
     private Component name;
@@ -136,8 +139,16 @@ public class ItemCraft
         ItemStack itemStack = new ItemStack(material);
         ItemMeta itemMeta = itemStack.getItemMeta();
 
-        itemMeta.displayName(name);
-        itemMeta.lore(lore);
+        if (itemMeta == null) return null;
+
+        // Name
+        itemMeta.setDisplayName(legacySerializer.serialize(name));
+
+        // Lore
+        List<String> legacyLore = new ArrayList<>();
+        for (Component component : lore)
+            legacyLore.add(legacySerializer.serialize(component));
+        itemMeta.setLore(legacyLore);
 
         // Enchantments
         for (Map.Entry<Enchantment, Integer> enchantment : enchantments.entrySet())
