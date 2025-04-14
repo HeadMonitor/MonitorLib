@@ -7,6 +7,7 @@ import org.bukkit.inventory.meta.trim.TrimPattern;
 
 import javax.annotation.Nullable;
 
+@SuppressWarnings("unused")
 public class MaterialUtilities
 {
 

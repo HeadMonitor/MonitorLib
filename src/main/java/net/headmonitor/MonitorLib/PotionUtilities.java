@@ -6,6 +6,7 @@ import org.bukkit.potion.PotionEffectType;
 
 import javax.annotation.Nullable;
 
+@SuppressWarnings("unused")
 public class PotionUtilities
 {
 
