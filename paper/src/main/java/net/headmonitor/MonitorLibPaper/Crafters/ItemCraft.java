@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLib.Crafters;
+package net.headmonitor.MonitorLibPaper.Crafters;
 
 import net.headmonitor.MonitorLib.ComponentUtilities;
 import net.kyori.adventure.text.Component;
