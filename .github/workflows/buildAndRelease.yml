@@ -72,7 +72,7 @@ jobs:
           body: ${{ steps.pr_body.outputs.body }}
           files: |
             target/*.jar
-            */target/*.jar # Includes JARs from all submodules' target directories
+            */target/*.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
