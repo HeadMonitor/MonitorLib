@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLib.Crafters;
+package net.headmonitor.MonitorLibPaper.Crafters;
 
 public class SkullCraft
 {

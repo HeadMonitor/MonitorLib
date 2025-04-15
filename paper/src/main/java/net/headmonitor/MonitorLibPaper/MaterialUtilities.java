@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLib;
+package net.headmonitor.MonitorLibPaper;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;

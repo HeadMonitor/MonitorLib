@@ -1,6 +1,6 @@
 package net.headmonitor.MonitorLibPaper.Crafters;
 
-import net.headmonitor.MonitorLib.ComponentUtilities;
+import net.headmonitor.MonitorLibPaper.ComponentUtilities;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -85,10 +85,10 @@ public class ItemCraft
     ///////////////////////////////////////////////////////////////////////////
 
     /**
-     * Add Enchantments to the ItemStack from a Map.
+     * Set Enchantments to the ItemStack from a Map.
      * @param enchantments The Enchantments Map.
      */
-    public ItemCraft addEnchantments(Map<Enchantment, Integer> enchantments)
+    public ItemCraft setEnchantments(Map<Enchantment, Integer> enchantments)
     {
         this.enchantments = enchantments;
         return this;
