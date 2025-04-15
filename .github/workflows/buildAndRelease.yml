@@ -1,0 +1,84 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'pom.xml'
+      - 'src/**'
+  
+  workflow_dispatch:
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Build with Maven
+        run: mvn clean package
+
+      - name: Extract plugin name from pom.xml
+        id: extract_name
+        run: |
+          PLUGIN_NAME=$(mvn help:evaluate -Dexpression=project.name -q -DforceStdout)
+          echo "plugin_name=$PLUGIN_NAME" >> $GITHUB_OUTPUT
+
+      - name: Get version from pom.xml
+        id: get_version
+        run: |
+          VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Get pull request body (if exists)
+        id: pr_body
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_API_URL="https://api.github.com/repos/${{ github.repository }}/commits/${{ github.sha }}/pulls"
+          PR_RESPONSE=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.groot-preview+json" $PR_API_URL)
+    
+          PR_BODY=$(echo "$PR_RESPONSE" | jq -r '.[0].body // ""')
+    
+          echo "body<<EOF" >> $GITHUB_OUTPUT
+          echo "$PR_BODY" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.get_version.outputs.version }}
+          name: ${{ steps.extract_name.outputs.plugin_name }} - v${{ steps.get_version.outputs.version }}
+          body: ${{ steps.pr_body.outputs.body }}
+          files: target/*.jar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Javadoc
+        run: |
+          mvn javadoc:javadoc
+
+      - name: Publish Javadoc to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: master
+          folder: docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -21,8 +21,8 @@
   <img src="media/HowToUse.png" alt="howToUse" height="60"/>
 </div>
 
-You can find the Wiki for the Library [here](https://github.com/HeadMonitor/MonitorLib/wiki)!
-
+You can find the Wiki for the Library [here](https://github.com/HeadMonitor/MonitorLib/wiki) and the JavaDoc [here](https://headmonitor.github.io/MonitorLib/)!
+ 
 ## Maven Setup
 ```xml
 Coming Soon
