@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"net.headmonitor.MonitorLibPaper"},{"l":"net.headmonitor.MonitorLibPaper.Builders"},{"l":"net.headmonitor.MonitorLibPaper.Utilities"},{"l":"net.headmonitor.MonitorLibSpigot"},{"l":"net.headmonitor.MonitorLibSpigot.Builders"},{"l":"net.headmonitor.MonitorLibSpigot.Utilities"}];updateSearchResults();

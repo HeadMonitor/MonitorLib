@@ -103,11 +103,12 @@
                 <executions>
                     <execution>
                         <id>generate-javadoc</id>
+                        <phase>package</phase>
                         <goals>
-                            <goal>javadoc</goal>
+                            <goal>aggregate</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>docs</outputDirectory>
+                            <outputDirectory>${project.basedir}/docs</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
