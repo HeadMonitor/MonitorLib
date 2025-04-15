@@ -80,7 +80,6 @@ jobs:
         run: |
           mvn javadoc:javadoc
           mkdir -p docs
-          cp -r docs/* docs/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
