@@ -12,8 +12,8 @@
 </div>
 
 - Item, Skull and Entity Creators.
-- Material, Enchantment, Potion Utilties.
-- Adventure Component and Readability Utilties.
+- Material, Enchantment, Potion Utilities.
+- Adventure Component and Readability Utilities.
 
 <br/>
 
