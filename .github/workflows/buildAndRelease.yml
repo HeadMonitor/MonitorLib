@@ -72,13 +72,18 @@ jobs:
           body: ${{ steps.pr_body.outputs.body }}
           files: |
             target/*.jar
-            **/target/*.jar
+            */target/*.jar # Includes JARs from all submodules' target directories
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Javadoc
         run: |
           mvn javadoc:javadoc
-          clean: true
+
+      - name: Publish Javadoc to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: master
+          folder: docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
