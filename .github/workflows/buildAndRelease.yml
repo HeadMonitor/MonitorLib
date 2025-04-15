@@ -78,28 +78,3 @@ jobs:
             */target/*.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build Javadoc
-        run: |
-          mvn javadoc:javadoc
-          mkdir -p docs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Prepare GitHub Pages
-        if: success()
-        run: |
-          mkdir -p out
-          cp -r docs/* out/
-
-      - name: Upload artifact
-        if: success()
-        uses: actions/upload-pages-artifact@v3.0.1
-        with:
-          path: out  # Path to the temporary output folder
-
-      - name: Deploy to GitHub Pages
-        if: success()
-        uses: actions/deploy-pages@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
