@@ -7,6 +7,7 @@ on:
     paths:
       - 'pom.xml'
       - 'src/**'
+      - '.gitmodules'
   
   workflow_dispatch:
 
@@ -17,6 +18,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          submodules: recursive # Initialize and update submodules
 
       - name: Set up Java
         uses: actions/setup-java@v3
@@ -54,9 +57,9 @@ jobs:
         run: |
           PR_API_URL="https://api.github.com/repos/${{ github.repository }}/commits/${{ github.sha }}/pulls"
           PR_RESPONSE=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.groot-preview+json" $PR_API_URL)
-    
+      
           PR_BODY=$(echo "$PR_RESPONSE" | jq -r '.[0].body // ""')
-    
+      
           echo "body<<EOF" >> $GITHUB_OUTPUT
           echo "$PR_BODY" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
@@ -67,7 +70,9 @@ jobs:
           tag_name: v${{ steps.get_version.outputs.version }}
           name: ${{ steps.extract_name.outputs.plugin_name }} - v${{ steps.get_version.outputs.version }}
           body: ${{ steps.pr_body.outputs.body }}
-          files: target/*.jar
+          files: |
+            target/*.jar
+            */target/*.jar # Includes JARs from all submodules' target directories
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
