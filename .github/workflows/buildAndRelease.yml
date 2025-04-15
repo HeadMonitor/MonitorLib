@@ -82,3 +82,21 @@ jobs:
           folder: docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prepare GitHub Pages
+        if: success()
+        run: |
+          mkdir -p out
+          cp -r docs/* out/  # Copy the /docs content to a temporary output folder
+
+      - name: Upload artifact
+        if: success()
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: out  # Path to the temporary output folder
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: actions/deploy-pages@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
