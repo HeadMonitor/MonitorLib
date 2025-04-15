@@ -4,17 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>MonitorLibPaper</artifactId>
-  <version>1.0.0.0</version>
-  <packaging>jar</packaging>
-  <name>MonitorLibPaper</name>
-
   <parent>
     <groupId>net.headmonitor</groupId>
     <artifactId>MonitorLib</artifactId>
     <version>[1.0.0.0,)</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
+
+  <artifactId>MonitorLibPaper</artifactId>
+  <version>1.0.0.0</version>
+  <packaging>jar</packaging>
+  <name>MonitorLibPaper</name>
 
   <properties>
     <java.version>21</java.version>
@@ -23,6 +23,7 @@
 
   <build>
     <defaultGoal>clean package</defaultGoal>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -33,6 +34,7 @@
           <target>${java.version}</target>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
@@ -47,6 +49,7 @@
         </executions>
       </plugin>
     </plugins>
+
     <resources>
       <resource>
         <directory>src/main/resources</directory>

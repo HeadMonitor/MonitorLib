@@ -10,6 +10,33 @@
     <packaging>pom</packaging>
 
     <name>MonitorLib</name>
+    <description>
+        A Minecraft Plugin Library to make your life developing, easier.
+    </description>
+    <url>https://headmonitor.net</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://github.com/HeadMonitor/MonitorLib/blob/master/LICENSE</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>HeadMonitor</name>
+            <email>headmonitor@headmonitor.net</email>
+            <organization>HeadMonitor</organization>
+            <organizationUrl>https://headmonitor.net</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/HeadMonitor/MonitorLib.git</connection>
+        <developerConnection>scm:git:ssh://github.com/HeadMonitor/MonitorLib.git</developerConnection>
+        <url>https://github.com/HeadMonitor/MonitorLib</url>
+    </scm>
+
     <modules>
         <module>paper</module>
         <module>spigot</module>
@@ -19,7 +46,6 @@
         <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
     <build>
         <defaultGoal>clean package</defaultGoal>
@@ -32,6 +58,59 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.11.2</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.7.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
