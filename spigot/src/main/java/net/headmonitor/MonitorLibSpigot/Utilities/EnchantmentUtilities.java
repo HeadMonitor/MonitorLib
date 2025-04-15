@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLibSpigot;
+package net.headmonitor.MonitorLibSpigot.Utilities;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;

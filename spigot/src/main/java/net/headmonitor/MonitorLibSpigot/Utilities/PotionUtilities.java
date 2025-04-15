@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLibSpigot;
+package net.headmonitor.MonitorLibSpigot.Utilities;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Color;

@@ -102,10 +102,13 @@
                 <version>3.11.2</version>
                 <executions>
                     <execution>
-                        <id>attach-javadocs</id>
+                        <id>generate-javadoc</id>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>javadoc</goal>
                         </goals>
+                        <configuration>
+                            <outputDirectory>docs</outputDirectory>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

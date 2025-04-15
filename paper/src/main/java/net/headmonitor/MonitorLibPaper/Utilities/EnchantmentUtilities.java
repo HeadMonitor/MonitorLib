@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLibPaper;
+package net.headmonitor.MonitorLibPaper.Utilities;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;

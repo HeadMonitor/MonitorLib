@@ -1,15 +1,17 @@
-package net.headmonitor.MonitorLibPaper;
+package net.headmonitor.MonitorLibSpigot.Utilities;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 
 @SuppressWarnings("unused")
 public class ComponentUtilities
 {
 
     private final static MiniMessage miniMessage = MiniMessage.miniMessage();
+    private final static LegacyComponentSerializer legacySerializer = LegacyComponentSerializer.legacySection();
 
     /**
      * Deserializes the given String using the Adventure API.
@@ -46,6 +48,16 @@ public class ComponentUtilities
         }
         else
             return componentToDeserialize.decoration(TextDecoration.ITALIC, false); // Remove italic decoration
+    }
+
+    /**
+     * Serializes the given Component to Legacy Text String.
+     * @param component The Component to Serialize.
+     * @return The Serialized String.
+     */
+    public static String legacySerialize(Component component)
+    {
+        return legacySerializer.serialize(component);
     }
 
 }

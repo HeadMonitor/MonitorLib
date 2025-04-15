@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLibSpigot;
+package net.headmonitor.MonitorLibPaper.Utilities;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
@@ -15,7 +15,7 @@ public class ReadabilityUtilities
      */
     public static Component materialToReadable(Material material)
     {
-        return Component.translatable(material.getTranslationKey());
+        return Component.translatable(material.translationKey());
     }
 
     /**
