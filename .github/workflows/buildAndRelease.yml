@@ -79,7 +79,8 @@ jobs:
       - name: Build Javadoc
         run: |
           mvn javadoc:javadoc
-          folder: docs
+          mkdir -p docs
+          cp -r docs/* docs/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -87,7 +88,7 @@ jobs:
         if: success()
         run: |
           mkdir -p out
-          cp -r docs/* out/  # Copy the /docs content to a temporary output folder
+          cp -r docs/* out/
 
       - name: Upload artifact
         if: success()
