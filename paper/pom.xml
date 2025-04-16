@@ -7,12 +7,11 @@
   <parent>
     <groupId>net.headmonitor</groupId>
     <artifactId>MonitorLib</artifactId>
-    <version>[1.0.0.0,)</version>
+    <version>1.0.0.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>MonitorLibPaper</artifactId>
-  <version>1.0.0.0</version>
   <packaging>jar</packaging>
   <name>MonitorLibPaper</name>
 
