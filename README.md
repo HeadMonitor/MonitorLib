@@ -35,7 +35,19 @@ You can find the Wiki for the Library [here](https://github.com/HeadMonitor/Moni
  
 ## Maven Setup
 ```xml
-Coming Soon
+<!-- If you are using Paper -->
+<dependency>
+    <groupId>net.headmonitor</groupId>
+    <artifactId>MonitorLibPaper</artifactId>
+    <version>1.0.0.0</version>
+</dependency>
+
+<!-- If you are using Spigot -->
+<dependency>
+    <groupId>net.headmonitor</groupId>
+    <artifactId>MonitorLibSpigot</artifactId>
+    <version>1.0.0.0</version>
+</dependency>
 ```
 
 ## Manual Setup
