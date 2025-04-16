@@ -49,6 +49,7 @@ You can find the Wiki for the Library [here](https://github.com/HeadMonitor/Moni
     <version>1.0.0.0</version>
 </dependency>
 ```
+![](https://img.shields.io/github/v/tag/HeadMonitor/MonitorLib?label=Latest%20Version&style=flat-square)
 
 ## Manual Setup
 If you want to use the Library witout **Build Automation Tools** you can download the **.jar** and add it
