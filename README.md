@@ -57,7 +57,7 @@ You will also need to shade the Library into your .jar file.
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-shade-plugin</artifactId>
-    <version>3.4.1</version> <!-- latest as of now -->
+    <version>3.6.0</version>
     <executions>
         <execution>
             <phase>package</phase>
