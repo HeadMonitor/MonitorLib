@@ -95,6 +95,9 @@ public class EntityBuilder
         {
             entity.setCustomName(ComponentUtilities.legacySerialize(name));
             entity.setCustomNameVisible(true);
+
+            if (name.equals(Component.text("")))
+                entity.setCustomNameVisible(false);
         }
 
         // Potion Effects
