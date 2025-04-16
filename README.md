@@ -51,9 +51,14 @@ You can find the Wiki for the Library [here](https://github.com/HeadMonitor/Moni
 ```
 ![](https://img.shields.io/github/v/tag/HeadMonitor/MonitorLib?label=Latest%20Version&style=flat-square)
 
+You will also need to shade the Library into your .jar file.
+
+```xml
+```
+
 ## Manual Setup
 If you want to use the Library witout **Build Automation Tools** you can download the **.jar** and add it
-as a dependency in your IDE.
+as a dependency in your IDE. Make sure you extract it in your .jar file.
 
 <br/>
 
