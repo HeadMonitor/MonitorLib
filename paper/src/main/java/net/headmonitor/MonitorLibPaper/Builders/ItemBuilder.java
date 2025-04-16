@@ -135,12 +135,18 @@ public class ItemBuilder
         itemMeta.lore(lore);
 
         // Enchantments
-        for (Map.Entry<Enchantment, Integer> enchantment : enchantments.entrySet())
-            itemStack.addUnsafeEnchantment(enchantment.getKey(), enchantment.getValue());
+        if (enchantments != null)
+        {
+            for (Map.Entry<Enchantment, Integer> enchantment : enchantments.entrySet())
+                itemStack.addUnsafeEnchantment(enchantment.getKey(), enchantment.getValue());
+        }
 
         // Item Flags
-        for (ItemFlag flag : itemFlags)
-            itemMeta.addItemFlags(flag);
+        if (!itemFlags.isEmpty())
+        {
+            for (ItemFlag flag : itemFlags)
+                itemMeta.addItemFlags(flag);
+        }
 
         itemStack.setItemMeta(itemMeta);
 
