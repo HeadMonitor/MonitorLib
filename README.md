@@ -54,6 +54,27 @@ You can find the Wiki for the Library [here](https://github.com/HeadMonitor/Moni
 You will also need to shade the Library into your .jar file.
 
 ```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>3.4.1</version> <!-- latest as of now -->
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>shade</goal>
+            </goals>
+            <configuration>
+                <relocations>
+                    <relocation>
+                        <pattern>net.headmonitor</pattern>
+                        <shadedPattern>your.plugin.libs.headmonitor</shadedPattern>
+                    </relocation>
+                </relocations>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
 ```
 
 ## Manual Setup
