@@ -8,6 +8,16 @@
 <br/>
 
 <div align="center">
+  <a href="https://github.com/HeadMonitor/MonitorLib"><img src="media/GitHubLogo.png" alt="mobCreatorGUI" width="64" /></a>
+  <a href=""><img src="media/SpigotLogo.png" alt="mobCreatorGUI" width="64" /></a>
+  <a href=""><img src="media/HangarLogo.png" alt="mobCreatorGUI" width="64" /></a>
+  <a href=""><img src="media/BuiltByBitLogo.png" alt="mobCreatorGUI" width="64" /></a>
+  <a href=""><img src="media/PolymartLogo.png" alt="mobCreatorGUI" width="64" /></a>
+</div>
+
+<br/>
+
+<div align="center">
   <img src="media/Features.png" alt="features" height="60"/>
 </div>
 
