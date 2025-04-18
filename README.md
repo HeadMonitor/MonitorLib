@@ -9,8 +9,8 @@
 
 <div align="center">
   <a href="https://github.com/HeadMonitor/MonitorLib"><img src="media/GitHubLogo.png" alt="mobCreatorGUI" width="64" /></a>
-  <a href=""><img src="media/SpigotLogo.png" alt="mobCreatorGUI" width="64" /></a>
-  <a href=""><img src="media/HangarLogo.png" alt="mobCreatorGUI" width="64" /></a>
+  <a href="https://www.spigotmc.org/resources/monitorlib.124201/"><img src="media/SpigotLogo.png" alt="mobCreatorGUI" width="64" /></a>
+  <a href="https://hangar.papermc.io/HeadMonitor/MonitorLib"><img src="media/HangarLogo.png" alt="mobCreatorGUI" width="64" /></a>
   <a href=""><img src="media/BuiltByBitLogo.png" alt="mobCreatorGUI" width="64" /></a>
   <a href=""><img src="media/PolymartLogo.png" alt="mobCreatorGUI" width="64" /></a>
 </div>
