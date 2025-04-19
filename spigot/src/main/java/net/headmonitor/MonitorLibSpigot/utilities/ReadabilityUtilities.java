@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLibSpigot.Utilities;
+package net.headmonitor.MonitorLibSpigot.utilities;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;

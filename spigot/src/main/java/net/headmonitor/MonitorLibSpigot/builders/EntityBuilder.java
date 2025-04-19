@@ -1,6 +1,6 @@
-package net.headmonitor.MonitorLibSpigot.Builders;
+package net.headmonitor.MonitorLibSpigot.builders;
 
-import net.headmonitor.MonitorLibSpigot.Utilities.ComponentUtilities;
+import net.headmonitor.MonitorLibSpigot.utilities.ComponentUtilities;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Location;
 import org.bukkit.World;

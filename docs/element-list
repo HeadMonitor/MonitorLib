@@ -2,5 +2,5 @@ net.headmonitor.MonitorLibPaper
 net.headmonitor.MonitorLibPaper.builders
 net.headmonitor.MonitorLibPaper.utilities
 net.headmonitor.MonitorLibSpigot
-net.headmonitor.MonitorLibSpigot.Builders
-net.headmonitor.MonitorLibSpigot.Utilities
+net.headmonitor.MonitorLibSpigot.builders
+net.headmonitor.MonitorLibSpigot.utilities

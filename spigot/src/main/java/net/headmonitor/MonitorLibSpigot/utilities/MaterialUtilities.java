@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLibSpigot.Utilities;
+package net.headmonitor.MonitorLibSpigot.utilities;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;

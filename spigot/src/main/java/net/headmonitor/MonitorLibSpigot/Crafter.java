@@ -1,8 +1,8 @@
 package net.headmonitor.MonitorLibSpigot;
 
-import net.headmonitor.MonitorLibSpigot.Builders.EntityBuilder;
-import net.headmonitor.MonitorLibSpigot.Builders.ItemBuilder;
-import net.headmonitor.MonitorLibSpigot.Builders.SkullBuilder;
+import net.headmonitor.MonitorLibSpigot.builders.EntityBuilder;
+import net.headmonitor.MonitorLibSpigot.builders.ItemBuilder;
+import net.headmonitor.MonitorLibSpigot.builders.SkullBuilder;
 
 @SuppressWarnings("unused")
 public class Crafter

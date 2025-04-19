@@ -1,6 +1,6 @@
-package net.headmonitor.MonitorLibSpigot.Builders;
+package net.headmonitor.MonitorLibSpigot.builders;
 
-import net.headmonitor.MonitorLibSpigot.Utilities.ComponentUtilities;
+import net.headmonitor.MonitorLibSpigot.utilities.ComponentUtilities;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -157,7 +157,6 @@ public class ItemBuilder
         }
 
         itemStack.setItemMeta(itemMeta);
-
         return itemStack;
     }
 
