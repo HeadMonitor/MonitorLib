@@ -1,6 +1,6 @@
-package net.headmonitor.MonitorLibPaper.Builders;
+package net.headmonitor.MonitorLibPaper.builders;
 
-import net.headmonitor.MonitorLibPaper.Utilities.ComponentUtilities;
+import net.headmonitor.MonitorLibPaper.utilities.ComponentUtilities;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -112,12 +112,20 @@ public class ItemBuilder
 
     ///////////////////////////////////////////////////////////////////////////
 
+    /**
+     * Add ItemFlags to the ItemStack.
+     * @param itemFlag The ItemFlags to add.
+     */
     public ItemBuilder addItemFlags(ItemFlag... itemFlag)
     {
         this.itemFlags.addAll(Arrays.asList(itemFlag));
         return this;
     }
 
+    /**
+     * Add an ItemFlag to the ItemStack.
+     * @param itemFlag The ItemFlag to add.
+     */
     public ItemBuilder addItemFlag(ItemFlag itemFlag)
     {
         this.itemFlags.add(itemFlag);
@@ -126,22 +134,24 @@ public class ItemBuilder
 
     ///////////////////////////////////////////////////////////////////////////
 
+    /**
+     * Create the ItemStack.
+     */
     public ItemStack create()
     {
         ItemStack itemStack = new ItemStack(material);
         ItemMeta itemMeta = itemStack.getItemMeta();
 
-        itemMeta.displayName(name);
-        itemMeta.lore(lore);
+        if (name != null) itemMeta.displayName(name);
+        if (lore != null && !lore.isEmpty())
+            itemMeta.lore(lore);
 
-        // Enchantments
-        if (enchantments != null)
+        if (enchantments != null && !enchantments.isEmpty())
         {
             for (Map.Entry<Enchantment, Integer> enchantment : enchantments.entrySet())
                 itemStack.addUnsafeEnchantment(enchantment.getKey(), enchantment.getValue());
         }
 
-        // Item Flags
         if (!itemFlags.isEmpty())
         {
             for (ItemFlag flag : itemFlags)
@@ -149,7 +159,6 @@ public class ItemBuilder
         }
 
         itemStack.setItemMeta(itemMeta);
-
         return itemStack;
     }
 

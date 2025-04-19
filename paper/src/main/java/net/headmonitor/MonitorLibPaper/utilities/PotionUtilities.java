@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLibPaper.Utilities;
+package net.headmonitor.MonitorLibPaper.utilities;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Color;

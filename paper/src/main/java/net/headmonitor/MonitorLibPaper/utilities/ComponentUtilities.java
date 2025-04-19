@@ -1,9 +1,12 @@
-package net.headmonitor.MonitorLibPaper.Utilities;
+package net.headmonitor.MonitorLibPaper.utilities;
 
+import net.headmonitor.MonitorLibPaper.Crafter;
+import net.headmonitor.MonitorLibPaper.builders.ItemBuilder;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import net.kyori.adventure.text.minimessage.MiniMessage;
+import org.bukkit.Material;
 
 @SuppressWarnings("unused")
 public class ComponentUtilities

@@ -1,3 +1,4 @@
 net.headmonitor.MonitorLibPaper
-net.headmonitor.MonitorLibPaper.Builders
-net.headmonitor.MonitorLibPaper.Utilities
+net.headmonitor.MonitorLibPaper.builders
+net.headmonitor.MonitorLibPaper.gui
+net.headmonitor.MonitorLibPaper.utilities

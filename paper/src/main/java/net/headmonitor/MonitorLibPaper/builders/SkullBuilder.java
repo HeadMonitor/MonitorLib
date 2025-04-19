@@ -1,4 +1,4 @@
-package net.headmonitor.MonitorLibPaper.Builders;
+package net.headmonitor.MonitorLibPaper.builders;
 
 import org.bukkit.OfflinePlayer;
 import org.bukkit.enchantments.Enchantment;
@@ -14,12 +14,20 @@ public class SkullBuilder extends ItemBuilder
 
     private OfflinePlayer owner;
 
+    /**
+     * Set the Owner of the Skull.
+     * @param owner The Owner of the Skull.
+     */
     public SkullBuilder owner(OfflinePlayer owner)
     {
         this.owner = owner;
         return this;
     }
 
+    /**
+     * Create the Skull.
+     * @return Returns the Skull ItemStack.
+     */
     @Override
     public ItemStack create()
     {

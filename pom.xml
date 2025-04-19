@@ -6,7 +6,7 @@
 
     <groupId>net.headmonitor</groupId>
     <artifactId>MonitorLib</artifactId>
-    <version>1.0.2.0</version>
+    <version>1.0.3.0</version>
     <packaging>pom</packaging>
 
     <name>MonitorLib</name>

@@ -1,6 +1,6 @@
-package net.headmonitor.MonitorLibPaper.Builders;
+package net.headmonitor.MonitorLibPaper.builders;
 
-import net.headmonitor.MonitorLibPaper.Utilities.ComponentUtilities;
+import net.headmonitor.MonitorLibPaper.utilities.ComponentUtilities;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -78,6 +78,10 @@ public class EntityBuilder
 
     /////////////////////////////////////////////////////////////////////
 
+    /**
+     * Set the Entity to it's Baby Variant.
+     * @param isBaby Whether to set to Baby Variant.
+     */
     public EntityBuilder setBaby(boolean isBaby)
     {
         this.isBaby = isBaby;
@@ -86,6 +90,12 @@ public class EntityBuilder
 
     //////////////////////////////////////////////////////////////////
 
+    /**
+     * Spawn the Entity.
+     * @param world The World to Spawn the Entity on.
+     * @param location The Location to Spawn the Entity on.
+     * @return Returns the Spawned Entity.
+     */
     public Entity spawn(World world, Location location)
     {
         Entity entity = world.spawnEntity(location, entityType);
@@ -94,7 +104,6 @@ public class EntityBuilder
         if (name != null)
         {
             entity.customName(name);
-            entity.setCustomNameVisible(true);
 
             if (name.equals(Component.text("")))
                 entity.setCustomNameVisible(false);

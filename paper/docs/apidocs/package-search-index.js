@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"net.headmonitor.MonitorLibPaper"},{"l":"net.headmonitor.MonitorLibPaper.Builders"},{"l":"net.headmonitor.MonitorLibPaper.Utilities"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"net.headmonitor.MonitorLibPaper"},{"l":"net.headmonitor.MonitorLibPaper.builders"},{"l":"net.headmonitor.MonitorLibPaper.gui"},{"l":"net.headmonitor.MonitorLibPaper.utilities"}];updateSearchResults();

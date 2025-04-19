@@ -1,8 +1,8 @@
 package net.headmonitor.MonitorLibPaper;
 
-import net.headmonitor.MonitorLibPaper.Builders.EntityBuilder;
-import net.headmonitor.MonitorLibPaper.Builders.ItemBuilder;
-import net.headmonitor.MonitorLibPaper.Builders.SkullBuilder;
+import net.headmonitor.MonitorLibPaper.builders.EntityBuilder;
+import net.headmonitor.MonitorLibPaper.builders.ItemBuilder;
+import net.headmonitor.MonitorLibPaper.builders.SkullBuilder;
 
 @SuppressWarnings("unused")
 public class Crafter
