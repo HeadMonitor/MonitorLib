@@ -60,4 +60,15 @@ public class ComponentUtilities
         return legacySerializer.serialize(component);
     }
 
+    /**
+     * Serializes the given String to Legacy Text String.
+     * @param string The String to Serialize.
+     * @return The Serialized String.
+     */
+    public static String legacySerialize(String string)
+    {
+        Component component = deserialize(string);
+        return legacySerializer.serialize(component);
+    }
+
 }

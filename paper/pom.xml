@@ -7,7 +7,7 @@
   <parent>
     <groupId>net.headmonitor</groupId>
     <artifactId>MonitorLib</artifactId>
-    <version>1.0.3.0</version>
+    <version>1.0.4.1</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 

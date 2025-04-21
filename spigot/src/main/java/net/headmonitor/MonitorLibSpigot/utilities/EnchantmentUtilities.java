@@ -240,7 +240,7 @@ public class EnchantmentUtilities
     /**
      * Converts Roman Numerals from 1 to 10 to their corresponding Integer.
      * @param romanNumeral The String of Roman Numerals.
-     * @return Returns the converted Integer.
+     * @return Returns the converted Roman Numeral.
      */
     public static int romanNumeralsToInt(String romanNumeral)
     {
@@ -257,6 +257,29 @@ public class EnchantmentUtilities
             case "IX" -> 9;
             case "X" -> 10;
             default -> -1;
+        };
+    }
+
+    /**
+     * Converts Integers from 1 to 10 to their corresponding Roman Numeral.
+     * @param integer The Integer to convert.
+     * @return Returns the converted Integer.
+     */
+    public static String intToRomanNumeral(int integer)
+    {
+        return switch (integer)
+        {
+            case 1 -> "I";
+            case 2 -> "II";
+            case 3 -> "III";
+            case 4 -> "IV";
+            case 5 -> "V";
+            case 6 -> "VI";
+            case 7 -> "VII";
+            case 8 -> "VIII";
+            case 9 -> "IX";
+            case 10 -> "X";
+            default -> "I";
         };
     }
 
